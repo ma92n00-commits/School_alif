@@ -42,9 +42,26 @@
         header {
             background: linear-gradient(135deg, var(--main-color), #8e44ad);
             color: var(--white);
-            padding: 50px 30px;
+            padding: 40px 30px; /* تعديل بسيط في الهوامش */
             text-align: center;
             position: relative;
+        }
+
+        /* تنسيق اللوكو الجديد */
+        .header-logo {
+            width: 110px;        /* عرض الصورة */
+            height: 110px;       /* ارتفاع الصورة */
+            object-fit: cover;   /* لضمان عدم تشوه الصورة */
+            border-radius: 50%;  /* جعل الصورة دائرية */
+            border: 4px solid rgba(255,255,255,0.8); /* إطار أبيض شفاف */
+            background-color: var(--white); /* خلفية بيضاء في حال كانت الصورة شفافة */
+            margin-bottom: 20px; /* مسافة بين الصورة والعنوان */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* ظل للصورة */
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover {
+            transform: scale(1.05) rotate(5deg);
         }
 
         header h1 {
@@ -159,6 +176,9 @@
 
     <div class="container">
         <header>
+            <!-- هنا تم إضافة الصورة -->
+            <img src="56.jpeg" alt="شعار المدرسة" class="header-logo">
+            
             <h1>المهارات الأساسية للصف الأول الابتدائي</h1>
             <h2>اللغة العربية - نهاية الفصل الأول</h2>
         </header>
